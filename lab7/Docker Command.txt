@@ -1,0 +1,19 @@
+Docker Command:
+1. docker pull hello-world
+2. docker run hello-world
+3. docker run -it ubuntu
+4. exit
+5. docker stop <id>
+6. ls
+7. mkdir <foldername>
+8. touch <filename>
+
+Docker network:
+1. docker network ls
+2. docker network create mongo-network
+3. docker network ls
+4. docker run -d -p 27017:27017 --name mongo --network mongo-network -e MONGO_INITDB_ROOYT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo
+5. docker network inspect mongo-network
+
+running mongo-express container on isolated network mongo-network
+1. docker run -d -p 8081:8081 --name mongo-express --network mongo-network -e ME_CONFIG_MONGO_ADMINUSERNAME=admin -e ME_CONFIG_MONGO_ADMINPASSWORD=admin -E ME_CONFIG_MONGODB_URL="mongodb://admin:admin@mongo:2017" mongo-express

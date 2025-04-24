@@ -1,0 +1,68 @@
+🔧 Docker General Commands
+
+Command	Description
+docker version	Shows the Docker client and server version.
+docker info	Displays system-wide information about Docker.
+docker help	Shows help for Docker commands.
+📦 Docker Image Commands
+
+Command	Description
+docker build -t <name>:<tag> <path>	Builds an image from a Dockerfile.
+docker pull <image>	Downloads an image from Docker Hub or another registry.
+docker push <image>	Uploads an image to a registry (like Docker Hub).
+docker images	Lists all locally stored Docker images.
+docker rmi <image>	Deletes a Docker image from the local machine.
+docker tag <image> <new_name>	Tags an image with a new name.
+docker save -o <file>.tar <image>	Saves an image to a tar archive.
+docker load -i <file>.tar	Loads an image from a tar archive.
+🧱 Docker Container Commands
+
+Command	Description
+docker run <image>	Runs a container from an image.
+docker run -it <image> /bin/bash	Runs a container in interactive mode.
+docker run -d <image>	Runs a container in detached mode (in background).
+docker run -p <host_port>:<container_port> <image>	Maps a container port to the host.
+docker ps	Lists running containers.
+docker ps -a	Lists all containers (including stopped ones).
+docker stop <container>	Stops a running container.
+docker start <container>	Starts a stopped container.
+docker restart <container>	Restarts a container.
+docker rm <container>	Deletes a container.
+docker exec -it <container> <command>	Runs a command inside a running container.
+docker attach <container>	Attaches to a running container.
+docker logs <container>	Shows logs of a container.
+docker inspect <container>	Displays detailed information about a container.
+🗂️ Docker Volume Commands
+
+Command	Description
+docker volume create <volume_name>	Creates a Docker volume.
+docker volume ls	Lists all volumes.
+docker volume inspect <volume>	Shows details about a volume.
+docker volume rm <volume>	Deletes a volume.
+🌐 Docker Network Commands
+
+Command	Description
+docker network ls	Lists all Docker networks.
+docker network create <network_name>	Creates a new Docker network.
+docker network inspect <network>	Shows detailed information about a network.
+docker network connect <network> <container>	Connects a container to a network.
+docker network disconnect <network> <container>	Disconnects a container from a network.
+docker network rm <network>	Deletes a network.
+🐳 Docker Compose Commands
+
+Command	Description
+docker-compose up	Starts all services defined in docker-compose.yml.
+docker-compose up -d	Starts services in detached mode.
+docker-compose down	Stops and removes all services and networks.
+docker-compose build	Builds or rebuilds services.
+docker-compose logs	Shows logs of services.
+docker-compose ps	Lists containers managed by Compose.
+docker-compose exec <service> <command>	Executes a command in a running service container.
+🧼 Docker Cleanup Commands
+
+Command	Description
+docker system prune	Removes all unused containers, networks, images (not used by containers), and optionally, volumes.
+docker container prune	Removes stopped containers.
+docker image prune	Removes unused images.
+docker volume prune	Removes unused volumes.
+docker network prune	Removes unused networks.
